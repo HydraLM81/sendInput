@@ -1,6 +1,6 @@
 # SendInput
 
-A C++ function designed to handle individual keypresses by importing data into a computers keyboard stream
+A C++ function defined in the `WinUser.h` header designed to handle keypresses on the virtual keyboard by importing data into a computers keyboard stream
 
 # What I did
 
@@ -21,9 +21,9 @@ The individual characters of the string can then be sent to the keyboard stream 
 
 `bool recurse=0` OPTIONAL;  tells the function if it is to hold the keys down simultaniously (used for keyboard shortcuts). Automatically set to false
 
-`int waitAll=0` OPTIONAL; tells the function how long to hold all the characters (if recurse is set to true, don't use this; not tested)
+`int waitAll=0` OPTIONAL; tells the function how long to hold all the characters (if recurse is set to true, bugs may occur; not tested) Automatically set to 0
 
-`int waitIndv[]=0` OPTIONAL;  tells the function how lonf to hold each individual character (if recurse is set to true, don't use this; not tested)
+`int waitIndv[]=0` OPTIONAL;  tells the function how lonf to hold each individual character (if recurse is set to true, bugs may occur; not tested) Automatically set to 0
 
 `int current=0` DO NOT USE; used to keep track of current number when using recursion
 
@@ -34,7 +34,7 @@ Call `hold();`  anywhere with the following parameters
 `std::string in`: REQUIRED;  either use as `hold("your string");` or `hold(string_variable);`
         for Windows/Start key, type `\x5B`
         for Control (left), type `\xA2`
-        for Shift (left; doesn't unpress, working on it), type `\x10`
+        for Shift (left), type `\x10` (doesn't unpress, working on it)
         for Escape/Esc, type `\x1B`
 
 `bool recurse`: OPTIONAL;  set to true (`hold(var,true)`) to use shortcuts
@@ -44,4 +44,7 @@ Call `hold();`  anywhere with the following parameters
 `int waitIndv[]`: OPTIONAL;  pass a pointer to an int array (`hold(var1,var2,var3,pointerVar)`) that corresponds to the wait time in seconds you want each individual character to be held. I don't recommend using with recurse
 
 
-Note from HydraLM: I spent a total of >=36 hours doing this. Why? I dont remember. did i stop doing schoolwork to figure out why the windows key doesn't like to unpress? yes. was it worth it? no. will I get kicked from lemoncloud for afk mining? you bet I wont
+
+
+<sub>Note from HydraLM: I spent a total of >=36 hours doing this. Why? I dont remember. how do I spend that long on this tiny program? because Idid i stop doing schoolwork to figure out why the windows key doesn't like to unpress? yes. was it worth it? no. will I get kicked from lemoncloud for afk mining? you bet I wont
+</sub>
