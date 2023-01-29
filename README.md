@@ -42,3 +42,6 @@ Call `hold();`  anywhere with the following parameters
 `int waitAll`: OPTIONAL;  sets the minimum time for each character to be held down (`hold(var1,var2,time)`). I don't recommend using with recurse
 
 `int waitIndv[]`: OPTIONAL;  pass a pointer to an int array (`hold(var1,var2,var3,pointerVar)`) that corresponds to the wait time in seconds you want each individual character to be held. I don't recommend using with recurse
+
+
+Note from HydraLM: I spent a total of >=36 hours doing this. Why? I dont remember. did i stop doing schoolwork to figure out why the windows key doesn't like to unpress? yes. was it worth it? no. will I get kicked from lemoncloud for afk mining? you bet I wont
